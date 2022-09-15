@@ -63,7 +63,7 @@ export default function Dashboard() {
     }
 
     let elements = document.querySelectorAll('li')
-        if (elements !== null) {
+        if (elements.length > 0) {
             elements[elements.length-1].scrollIntoView()
         }
 
