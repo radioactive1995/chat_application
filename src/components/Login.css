@@ -1,0 +1,73 @@
+.login-container {
+    font-size: 1em;
+    width: 800px;
+    height: auto;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.login-container fieldset {
+    border: 0;
+    font-size: 2em;
+}
+
+.login-container fieldset label {
+    display: block;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.login-container fieldset input {
+    margin-top: 10px;
+    border-radius: 2px;
+    font-size: 1em;
+    display: block;
+    border: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    color: rgb(255, 255, 255, 0.9);
+    padding: 10px;
+}
+
+.login-container fieldset label {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.login-container fieldset label:nth-of-type(1) {
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.login-container fieldset label:nth-of-type(2) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login-container input[type='submit'] {
+    font-size: 2em;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+    padding: 10px 90px 10px 90px;
+    border-radius: 2px;
+    background: rgba(9, 124, 255, 0.5);
+    color: rgb(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.login-container input[type='submit']:active {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    color: rgb(0, 0, 0, 0.7)
+}

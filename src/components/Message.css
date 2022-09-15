@@ -1,0 +1,51 @@
+.message-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    gap: 1px;
+    align-items: center;
+}
+
+.avatar {
+    width: 10%;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.avatar::before {
+    position: relative;
+    top: 10%;
+    left: 20%;
+    font: var(--fa-font-solid);
+    content: "\f118";
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 2em;
+}
+
+.text-box {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0, 0.2);
+    padding: 5px;
+    overflow: auto;
+    font-size: 1.5em;
+}
+
+.currentUser-message-container {
+    flex-direction: row;
+}
+
+.otherUsers-message-container {
+    flex-direction: row-reverse;
+}
+
+.currentUser-text-box {
+    background: rgb(0, 132, 255);
+}
+
+.otherUsers-text-box {
+    background: rgb(0, 119, 64);
+}
