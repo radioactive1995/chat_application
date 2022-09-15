@@ -16,6 +16,8 @@ export default function Signup() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate();
 
+    console.log("We are in signup component!")
+
     const onChangeEmail = (e) => 
     { 
         setFormData((prevFormState => ({email: e.target.value, password: prevFormState.password, confirmPassword: prevFormState.confirmPassword})))

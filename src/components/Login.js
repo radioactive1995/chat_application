@@ -4,6 +4,7 @@ import {useRef, useEffect, useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login() {
+    
     const password = useRef()
     const { login, currentUser } = useAuth();
     const [formData, setFormData]  = useState({
@@ -13,6 +14,8 @@ export default function Login() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate();
+
+    console.log("We are in login component!")
 
     const onChangeEmail = (e) => {
         setFormData((prevState) => ({email: e.target.value, password: prevState.password}))

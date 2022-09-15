@@ -17,6 +17,7 @@ export default function Dashboard() {
   const query = messagesRef.orderBy('createdAt', 'desc').limit(limit)
 
   const [messages] = useCollectionData(query)
+  console.log("We are in dashboard component!")
 
     useEffect(() => {
         document.addEventListener('keydown', handleKeyPress)
