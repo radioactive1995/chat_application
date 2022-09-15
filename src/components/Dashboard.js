@@ -43,6 +43,11 @@ export default function Dashboard() {
                 text: submitValue
             })
         }
+
+        let elements = document.querySelectorAll('li')
+        if (elements !== null) {
+            elements[elements.length-1].scrollIntoView()
+        }
         
         setSubmitValue('')
     }
