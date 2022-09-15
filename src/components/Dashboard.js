@@ -17,6 +17,7 @@ export default function Dashboard() {
   const query = messagesRef.orderBy('createdAt', 'desc').limit(limit)
 
   const [messages] = useCollectionData(query)
+
   console.log("We are in dashboard component!")
 
     useEffect(() => {
@@ -69,6 +70,8 @@ export default function Dashboard() {
         }
     }
 
+    const newList = messages !== undefined ?  [...messages] : undefined
+
     return (
     <> 
         {(currentUser !== null && messages !== undefined) && <>
@@ -76,7 +79,7 @@ export default function Dashboard() {
         <header><h1 className='dashboard-title'>Messenger</h1><div className='logout icon' onClick={onLogout}></div></header>
         <div className='dashboard-viewport'>
             <ul>
-                {messages.reverse().map(message => (<li key={message['createdAt']}><Message text={message['text']} textUid={message['uid']} currentUserUid={currentUser['uid']} /></li>))}
+                {newList.reverse().map(message => (<li key={message['createdAt']}><Message text={message['text']} textUid={message['uid']} currentUserUid={currentUser['uid']} /></li>))}
             </ul>
         </div>
             <form onSubmit={onSubmit}>
