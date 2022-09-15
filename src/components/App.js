@@ -6,7 +6,6 @@ import { AuthProvider } from '../contexts/AuthContext'
 import { HashRouter , Routes, Route} from 'react-router-dom'
 
 function App() {
-  console.log("We are in App component!")
   return (
     <div className="App">
       <HashRouter>

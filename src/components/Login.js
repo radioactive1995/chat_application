@@ -15,8 +15,6 @@ export default function Login() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate();
 
-    console.log("We are in login component!")
-
     const onChangeEmail = (e) => {
         setFormData((prevState) => ({email: e.target.value, password: prevState.password}))
         setError('')

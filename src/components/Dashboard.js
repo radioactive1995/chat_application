@@ -18,8 +18,6 @@ export default function Dashboard() {
 
   const [messages] = useCollectionData(query)
 
-  console.log("We are in dashboard component!")
-
     useEffect(() => {
         document.addEventListener('keydown', handleKeyPress)
 
@@ -45,12 +43,6 @@ export default function Dashboard() {
                 text: submitValue
             })
         }
-
-        let elements = document.querySelectorAll('li')
-        if (elements !== null) {
-            elements[elements.length-1].scrollIntoView()
-        }
-        
         setSubmitValue('')
     }
 
@@ -70,7 +62,10 @@ export default function Dashboard() {
         }
     }
 
-    const newList = messages !== undefined ?  [...messages] : undefined
+    let elements = document.querySelectorAll('li')
+        if (elements !== null) {
+            elements[elements.length-1].scrollIntoView()
+        }
 
     return (
     <> 
@@ -79,7 +74,7 @@ export default function Dashboard() {
         <header><h1 className='dashboard-title'>Messenger</h1><div className='logout icon' onClick={onLogout}></div></header>
         <div className='dashboard-viewport'>
             <ul>
-                {newList.reverse().map(message => (<li key={message['createdAt']}><Message text={message['text']} textUid={message['uid']} currentUserUid={currentUser['uid']} /></li>))}
+                {[...messages].reverse().map(message => (<li key={message['createdAt']}><Message text={message['text']} textUid={message['uid']} currentUserUid={currentUser['uid']} /></li>))}
             </ul>
         </div>
             <form onSubmit={onSubmit}>
